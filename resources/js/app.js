@@ -30,3 +30,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+let el = document.getElementById('alert-message');
+if(el) {
+    setTimeout(function () {
+        el.classList.add('hide');
+    }, 1000);
+}

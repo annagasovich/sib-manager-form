@@ -5324,6 +5324,13 @@ Vue.component('example-component', (__webpack_require__(/*! ./components/Example
 var app = new Vue({
   el: '#app'
 });
+var el = document.getElementById('alert-message');
+
+if (el) {
+  setTimeout(function () {
+    el.classList.add('hide');
+  }, 1000);
+}
 
 /***/ }),
 

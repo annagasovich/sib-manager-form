@@ -11286,3 +11286,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.show {
+  transition: opacity 400ms;
+}
+
+.hide {
+  opacity: 0;
+}

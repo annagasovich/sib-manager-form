@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('application')->group(function () {
     Route::post('/send', [FormController::class, 'post']);
     Route::get('/success', [FormController::class, 'success'])->name('success');
+    Route::post('/check', [ListController::class, 'post']);
 });
