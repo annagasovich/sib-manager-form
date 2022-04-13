@@ -44,8 +44,8 @@ class FormController extends Controller
         $application = new Application();
         $application->subject = $request->subject;
         $application->body = $request->body;
-        $path = $request->file('file')->store('application_files');
-        $application->file = $path;
+        $path = $request->file('file')->store('public/application_files');
+        $application->file = Storage::url($path);
         $application->user_id = Auth::user()->getAuthIdentifier();
         $application->save();
 
