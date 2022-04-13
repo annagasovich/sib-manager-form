@@ -13,6 +13,9 @@ class AddPlaceholder extends Migration
      */
     public function up()
     {
+        if(!is_dir(storage_path('app/public/application_files'))) {
+            mkdir(storage_path('app/public/application_files'));
+        }
         File::copy(public_path('img/placeholder.jpg'), storage_path('app/public/application_files/placeholder.jpg'));
     }
 

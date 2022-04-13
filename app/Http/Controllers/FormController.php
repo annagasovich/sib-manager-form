@@ -21,6 +21,12 @@ class FormController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     * Save application
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function post(Request $request)
     {
 

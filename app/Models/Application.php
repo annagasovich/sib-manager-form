@@ -9,6 +9,10 @@ class Application extends Model
 {
     use HasFactory;
 
+    /**
+     * Client
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
